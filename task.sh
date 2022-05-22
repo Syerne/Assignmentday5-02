@@ -51,3 +51,30 @@ else
     echo "enter only one digit number"
 fi
 
+
+number=$(( RANDOM%7 ))
+echo $number
+if(( number == 0 ))
+then
+echo "zero"
+elif(( number == 1 ))
+then
+echo "monday"
+elif(( number == 2 ))
+then
+echo "tuesday"
+elif(( number == 3 ))
+then
+echo "wednesday"
+elif(( number == 4 ))
+then
+echo "thursday"
+elif(( number == 5 ))
+then
+echo "friday"
+elif(( number == 6 ))
+then
+echo "saturday"
+else
+echo "sunday"
+fi
