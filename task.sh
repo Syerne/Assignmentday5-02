@@ -78,3 +78,31 @@ echo "saturday"
 else
 echo "sunday"
 fi
+
+
+
+read -p "enter any place number: " num
+
+if(( num == 1 ))
+then
+echo "unit"
+elif(( num == 10 ))
+then
+echo "ten"
+elif(( num == 100 ))
+then
+echo "hundred"
+elif(( num == 1000 ))
+then
+echo "thousand"
+elif(( num == 10000 ))
+then
+echo "ten thousands"
+elif(( num == 100000 ))
+then
+echo "lacs"
+else
+echo "please enter number in a range"
+fi
+
+
