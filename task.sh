@@ -4,6 +4,7 @@ read -p "enter assignment day " day
 flip=$(( RANDOM%3 ))
 #tail=0
 #head=1
+echo "flip num is: " $flip
 if(( flip == 0 ))
 then
  echo "Tails"
@@ -173,3 +174,70 @@ then
 else
     echo "false"
 fi
+
+
+
+
+read -p "enter single digit number: " num
+case $num in
+        1) echo "one"
+                ;;
+        2) echo "two"
+                ;;
+        3) echo "three"
+                ;;
+        4) echo "four"
+                ;;
+        5) echo "five"
+                ;;
+        6) echo "six"
+                ;;
+        7) echo "seven"
+                ;;
+        8) echo "eight"
+                ;;
+        *) echo "nine"
+esac
+
+
+
+
+read -p "enter week number: " day
+case $day in
+        1) echo "monday"
+                ;;
+        2) echo "tuesday"
+                ;;
+        3) echo "wednesday"
+                ;;
+        4) echo "thursday"
+                ;;
+        5) echo "friday"
+                ;;
+        6) echo "saturday"
+                ;;
+        7) echo "sunday"
+                ;;
+        *) echo "type num in range of 7 days"
+esac
+
+
+
+read -p "enter place number: " place
+case $place in
+        10) echo "ten"
+                ;;
+        100) echo "hundred"
+                ;;
+        1000) echo "thousand"
+                ;;
+        10000) echo "ten thousand"
+                ;;
+        100000) echo "lac"
+                ;;
+        1000000) echo "ten lac"
+                ;;
+        *) echo "please enter in range"
+esac
+
+
