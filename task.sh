@@ -106,3 +106,46 @@ echo "please enter number in a range"
 fi
 
 
+A=$(( 100 + RANDOM%900 ))
+B=$(( 100 + RANDOM%900 ))
+C=$(( 100 + RANDOM%900 ))
+D=$(( 100 + RANDOM%900 ))
+E=$(( 100 + RANDOM%900 ))
+echo "3 digit 5 random num is: " $A $B $C $D $E
+if(( A > B && A > C && A > D && A > E ))
+then
+    echo "max is A: " $A
+elif(( B > A && B > C && B > D && B > E ))
+then
+    echo "max is B: " $B
+elif(( C > B && C > D && C > D && C > E ))
+then
+    echo "max is C: " $C
+elif(( D > B && D > C && D > A && D > E ))
+then
+    echo "max is D: " $D
+elif(( E > B && E > C && E > D && E > A ))
+then
+    echo "max is E: " $E
+else
+    echo "finding error"
+fi
+
+if(( A < B && A < C && A < D && A < E ))
+then
+    echo "min is A: " $A
+elif(( B < A && B < C && B < D && B < E ))
+then
+    echo "min is B: " $B
+elif(( C > B && C < A && C < D && C < E ))
+then
+    echo "min is C: " $C
+elif(( D < B && D < C && D < A && D < E ))
+then
+    echo "min is D: " $D
+elif(( E < A && E < B && E < C && E < D ))
+then
+    echo "min is E: " $E
+else
+    echo "error"
+fi
