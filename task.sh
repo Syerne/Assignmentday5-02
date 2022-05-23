@@ -149,3 +149,27 @@ then
 else
     echo "error"
 fi
+
+
+
+
+read -p "enter date in dd formate: " date
+read -p "enter month in mm formate: " month
+if(( $date >= 20 && $date <=31 && $month==3 ))
+then
+echo "true"
+
+elif(( $date>0 && $date<31 && $month==4 ))
+then
+    echo "true "
+
+elif(( $date >0 && $date<=31 && $month==5 ))
+then
+    echo "true"
+
+elif(( $date >0 && $date <=20 && $month==6))
+then
+    echo "true "
+else
+    echo "false"
+fi
