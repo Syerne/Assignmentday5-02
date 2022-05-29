@@ -261,3 +261,32 @@ then
 else
         echo "Please enter a valid input"
 fi
+
+
+
+
+
+
+read -p "press 1 Feet to Inch
+press 2 Feet to Meter
+press 3 Inch to Feet
+press 4 Meter to feet
+Please select conversion unit from 1 to 4: " N
+
+read -p "enter value for unit conversion:" input
+case $N in
+	1) inch=`awk "BEGIN {print $input * 12 }"`
+		echo "$input Feet "=" $inch inch"
+		;;	#ft to in
+	2) meter=`awk "BEGIN {print $input / 3.28 }"`
+		echo "$input Feet "=" $meter Meter"
+		;;	#ft to m
+	3) feet=`awk "BEGIN {print $input / 12 }"`
+		echo "$input Inch "=" $feet Feet"
+		;;	#in to ft
+	4) feet1=`awk "BEGIN {print $input * 3.28 }"`
+		echo "$input Meter "=" $feet1 Feet"
+		;;	#m to ft
+	*) echo "Invalid opeartion"
+		;;
+esac 
